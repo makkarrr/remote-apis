@@ -8,7 +8,7 @@ import java.util.*;
 @Repository
 public class MovieRepository {
 
-    Map<String,Movie> repo = new HashMap<>();
+    Map<String, Movie> repo = new HashMap<>();
     public void add(Movie movie) {
         repo.put(movie.getName(), movie);
     }
@@ -17,7 +17,6 @@ public class MovieRepository {
         if(repo.containsKey(name))
             return Optional.of(repo.get(name));
         return Optional.empty();
-
     }
 
     public List<Movie> getAll() {
